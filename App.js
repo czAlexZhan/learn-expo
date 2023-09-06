@@ -2,7 +2,7 @@
  * @Author: zhanxw01 zhanxw01@mingyuanyun.com
  * @Date: 2023-08-31 17:43:40
  * @LastEditors: zhanxw01 zhanxw01@mingyuanyun.com
- * @LastEditTime: 2023-09-05 17:18:21
+ * @LastEditTime: 2023-09-05 17:40:10
  * @FilePath: \StickerSmash\App.js
  * @Description:
  */
@@ -17,6 +17,7 @@ import IconButton from "./components/IconButton";
 import EmojiPicker from "./components/EmojiPicker";
 import EmojiList from './components/EmojiList';
 import EmojiSticker from "./components/EmojiSticker";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 export default function App() {
   const [imageUri, setImageUri] = useState(
@@ -57,7 +58,7 @@ export default function App() {
   };
 
   return (
-    <View style={styles.container}>
+    <GestureHandlerRootView style={styles.container}>
       <View style={styles.imageContainer}>
         <ImageViewer placeholderImageSource={imageUri} />
         {pickedEmoji && <EmojiSticker imageSize={40} stickerSource={pickedEmoji} />}
@@ -92,7 +93,7 @@ export default function App() {
         <EmojiList onSelect={setPickedEmoji} onCloseModal={onModalClose} />
       </EmojiPicker>
       <StatusBar style="auto" />
-    </View>
+    </GestureHandlerRootView>
   );
 }
 

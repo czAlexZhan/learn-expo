@@ -2,7 +2,7 @@
  * @Author: zhanxw01 zhanxw01@mingyuanyun.com
  * @Date: 2023-09-05 15:10:20
  * @LastEditors: zhanxw01 zhanxw01@mingyuanyun.com
- * @LastEditTime: 2023-09-05 15:24:40
+ * @LastEditTime: 2023-09-05 17:23:47
  * @FilePath: \StickerSmash\components\Button.tsx
  * @Description: 
  */
@@ -10,11 +10,6 @@ import { StyleSheet, View, Pressable, Text } from "react-native";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 
 export default function Button({ label, theme, onPress}) {
-  console.log(
-    "%c [ theme ]-13",
-    "font-size:13px; background:pink; color:#bf2c9f;",
-    theme
-  );
   if (theme === "primary") {
     return (
       <View
